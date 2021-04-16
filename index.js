@@ -8,15 +8,6 @@ io.on("connection",(socket) => {
     socket.on("disconnect", () => {
         console.log(` X desconectou: ${socket.id}`);
     })
-    
-    socket.on("boasvindas", (data) => {
-        console.log(data);
-    })
-
-    socket.on("palavra",(data) => {
-        console.log(data);
-        socket.emit("resultado", `${data} - Guia do Programador!`);
-    })
 })
 
 
